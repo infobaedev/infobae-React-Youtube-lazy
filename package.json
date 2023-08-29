@@ -3,13 +3,13 @@
   "version": "1.2.0",
   "private": false,
   "dependencies": {
-    "react": "^16.4.0",
-    "react-dom": "^16.4.0",
-    "react-scripts": "1.1.4"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1"
   },
   "devDependencies": {
-    "@types/react": "^16.7.17",
-    "@types/react-dom": "^16.0.11",
+    "@types/react": "^18.2.21",
+    "@types/react-dom": "^18.2.7",
     "typescript": "^3.2.2"
   },
   "scripts": {
@@ -33,7 +33,7 @@
     "Load",
     "ReactJS",
     "TypeScript",
-    "TS",
+    "TS"
   ],
   "author": "Vladyslav Kochetkov <vladyslavkochetkov1998@gmail.com>",
   "license": "MIT",
