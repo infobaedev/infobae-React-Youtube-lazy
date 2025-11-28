@@ -4,6 +4,7 @@ class ReactYoutube extends Component {
     constructor(props) {
         super();
         this.state = { ...this._handleInit(props), UUID: "ReactYoutube" + Math.floor(Math.random() * 10000000), playPress: false};
+        this.wrapperRef = React.createRef();
     }
 
     _handleInit(props){
@@ -180,7 +181,7 @@ class ReactYoutube extends Component {
                 return;
             }
         }
-        let element = this.refs[this.state.UUID].getBoundingClientRect();
+        let element = this.wrapperRef.current.getBoundingClientRect();
         let x = this._elementShouldShow(element, this.state.lazyloadSize);
         if(x){
             this.setState({startLazy: true});
@@ -261,7 +262,7 @@ class ReactYoutube extends Component {
         if(this.state.videoID == null)
             return <div className="ReactYoutube-NoID"></div>
         return (
-            <div ref={this.state.UUID} className="ReactYoutube">
+            <div ref={this.wrapperRef} className="ReactYoutube">
                 <style>
                     {this.state.transCSS}
                 </style>
